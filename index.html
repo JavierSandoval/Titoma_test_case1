@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wild Life</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>-->
+    
+
+
+  </head>
+  <body>       
+     
+    <div class="container blanco mt-3">
+        <nav class="navbar navbar-light bg-light">
+            <h1 class="text-success"><a href="" class="text-decoration-none text-reset">Animal shelter - Wild Life</a></h1>
+            
+          </nav>
+    </div>
+
+    <br>
+
+    <div class="container blanco">
+      <div class="row">
+        <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2 ">
+          <div class="container">
+            <h1><span class="badge badge-secondary">Menu</span></h1>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                  <!--<a class="nav-link text-decoration-none text-reset" href="#">View Animals</a>-->
+                  <button type="button" class="btn btn-info" onclick="mostrar('animals')">View Animals</button>
+                </li>
+                <li class="nav-item">
+                  <!--<a class="nav-link text-decoration-none text-reset" href="#">Upload profil</a>-->
+                  <button type="button" class="btn btn-success mt-1" onclick="mostrar('profile')">Upload profile</button>
+                </li>
+              </ul>
+          </div>         
+        </div>
+        <div class="col-sm-9 col-md-9 col-lg-9 col-xl-9 gris ml-5">
+            <div class="container">
+
+              <div id="animals" class="animals">
+                <div class="container blanco">
+                  <h2 class="text-info">Animals in our shelter</h2>
+                  <ul class="list-group"  id="list">
+                    
+                  </ul>
+
+                </div>
+              </div>
+
+              <div id="profile" class="profile">
+                  <form id="form_profile"> 
+                      <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <label for="name">Name</label>
+                          <input name="animal_name" type="text" class="form-control" id="name" placeholder="name">
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="kind">Kind</label>
+                          <input name="animal_kind" type="text" class="form-control" id="kind" placeholder="kind">
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <label for="entry_date">Entry Date</label>
+                          <input name="entry_date" type="date" class="form-control" id="entry_date">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="age">Age</label>
+                            <input name="animal_age" type="number" class="form-control" id="age" min="0" max="150" placeholder="Age">
+                        </div>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Sign in</button>
+                    </form>
+
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="light" class="white_content">
+        <div class="container">
+  
+          <div id="data">       
+            
+          </div>
+          <button onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'" class="btn btn-danger btn-block">Cerrar</button>
+  
+        </div>
+      </div>
+      <div id="fade" class="black_overlay"></div>
+
+      <script src="js/scripts.js" type="text/javascript"></script>
+  
+  </body>
+</html>
